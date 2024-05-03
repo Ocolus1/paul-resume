@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import Button from '@mui/material/Button';
 import Experience from "./Experience"
 
 const experienceCard = [

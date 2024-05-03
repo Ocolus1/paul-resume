@@ -1,25 +1,25 @@
-import React from 'react'
-import Image from 'next/image'
+/* eslint-disable @next/next/no-img-element */
+import React from 'react';
 import Button from '@mui/material/Button';
 
-
 export default function SectionTwo({ myWork }) {
-  return (
-		<div className="flex justify-center py-6" ref={myWork} >
+	return (
+		<div className="flex justify-center py-6" ref={myWork}>
 			<div className="flex text-white w-full max-w-screen-lg">
 				<div className="flex flex-row items-center w-full">
 					<div className="w-1/2">
 						<h1 className="text-[105px] font-bold w-32">My Work</h1>
 						<div className="max-w-md text-xl">
-							I have experience deploying scalable travel, event, AI
-							and telemedicine web applications using React Single
-							Page Application (SPA) and Next Js
-							technologies. I've collaborated on over 140 projects
-							with more than 50 clients globally. Additionally,
-							I'm passionate about Passionate about SAAS, 
-                            Web3 & Innovative Software Solutions. My skills span across frontend,
-							backend, and full-stack development, and I&apos;m open to
-							freelance opportunities in these areas.
+							I have experience deploying scalable travel, event,
+							AI and telemedicine web applications using React
+							Single Page Application (SPA) and Next Js
+							technologies. I&apos;ve collaborated on over 140
+							projects with more than 50 clients globally.
+							Additionally, I&apos;m passionate about Passionate
+							about SAAS, Web3 & Innovative Software Solutions. My
+							skills span across frontend, backend, and full-stack
+							development, and I&apos;m open to freelance
+							opportunities in these areas.
 						</div>
 					</div>
 					<div className="w-1/2 flex flex-col justify-between h-full py-4 px-2">
@@ -43,5 +43,5 @@ export default function SectionTwo({ myWork }) {
 				</div>
 			</div>
 		</div>
-  );
+	);
 }

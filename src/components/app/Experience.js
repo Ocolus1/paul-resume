@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Accordion from '@mui/material/Accordion';
-import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddIcon from '@mui/icons-material/Add';
+import Image from "next/image";
 
 function StringSplitter({ text }) {
   // Split the string by "."
@@ -25,7 +24,6 @@ function StringSplitter({ text }) {
 export default function Experience({ position, company, duration, img, description }) {
     const expanded = company == "Fessburn (Agency)" ? true : false;
 
-
     return (
         <>
             <Accordion className="rounded-lg mb-3 bg-transparent w-10/12" defaultExpanded={expanded} >
@@ -43,8 +41,17 @@ export default function Experience({ position, company, duration, img, descripti
                 <AccordionDetails className="bg-[#251d40] mt-3 rounded-lg text-white">
                     <div className="flex flex-row justify-between w-full text-white text-xs">
                         <StringSplitter text={description} />
-                        <div className="flex items-center">
-                            <img src={img} className="rounded-full h-20 w-20" alt="slash" />
+                        <div className="flex items-center w-2/12">
+                            <div className="w-full text-center relative">
+                                <Image 
+                                    src={img} 
+                                    alt="slash"
+                                    width={100}
+                                    height={100}
+                                    style={{objectFit: "cover"}}
+                                    className="rounded-full h-20 w-20"
+                                />
+                            </div>
                         </div>
                     </div>
                     
