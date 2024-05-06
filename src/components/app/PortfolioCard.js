@@ -15,10 +15,10 @@ export default function Portofolio({img_src, title, category, link}) {
 
 	return (
 		<>
-            <div className="min-h-[50vh] bg-[#211f22] rounded-lg shadow" 
+            <div className=" bg-[#211f22] rounded-lg shadow hover:cursor-pointer" 
                 onMouseEnter={() => {
                     setText(spanier);
-                    setImgClass("scale-125");
+                    setImgClass("scale-110");
                 }} 
                 onMouseLeave={() => {
                     setText(category);
@@ -31,15 +31,15 @@ export default function Portofolio({img_src, title, category, link}) {
                             <img
                                 src={img_src}
                                 alt="unsplash"
-                                className={`w-full h-5/6 min-h-60 rounded-t-lg ${imgClass} transition-transform duration-500 ease-in-out`}
+                                className={`w-full min-h-48 bg-cover bg-center rounded-t-lg ${imgClass} transition-transform duration-500 ease-in-out`}
                             />
                         </a>
                     </div>
                     <div className="p-6">
-                        <h2 className='text-xl text-white font-bold'>
+                        <h2 className='sm:text-xl text-white font-bold'>
                             {title}
                         </h2>
-                        <div className="text-[#c3c3c4]">
+                        <div className="smw:text-xs text-[#c3c3c4]">
                             <TextTransition springConfig={presets.wobbly}>{text}</TextTransition>
                         </div>
                     </div>

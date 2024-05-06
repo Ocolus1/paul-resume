@@ -4,12 +4,12 @@ import Button from '@mui/material/Button';
 
 export default function SectionTwo({ myWork }) {
 	return (
-		<div className="flex justify-center py-6" ref={myWork}>
-			<div className="flex text-white w-full max-w-screen-lg">
-				<div className="flex flex-row items-center w-full">
-					<div className="w-1/2">
-						<h1 className="text-[105px] font-bold w-32">My Work</h1>
-						<div className="max-w-md text-xl">
+		<div className="flex justify-center px-5 sm:px-0 py-6" ref={myWork}>
+			<div className="flex text-white w-full max-w-screen-lg sm:px-5 xl:px-0">
+				<div className="flex flex-col md:flex-row items-center w-full">
+					<div className="md:w-1/2">
+						<h1 className="text-xl sm:text-[32px] md:text-[64px] lg:text-[80px] mdw:mb-3 leading-relaxed font-bold ">My Work</h1>
+						<div className="smw:text-xs mdw:mb-3 md:max-w-md md:text-md lg:text-xl">
 							I have experience deploying scalable travel, event,
 							AI and telemedicine web applications using React
 							Single Page Application (SPA) and Next Js
@@ -22,19 +22,19 @@ export default function SectionTwo({ myWork }) {
 							opportunities in these areas.
 						</div>
 					</div>
-					<div className="w-1/2 flex flex-col justify-between h-full py-4 px-2">
+					<div className="w-full md:w-1/2 flex flex-col justify-between h-full py-8 md:py-4 px-2">
 						<img
 							src="/learning-with.png"
-							className="h-72"
+							className="h-72 rounded-lg"
 							alt="learning"
 						/>
-						<div>
+						<div className="mt-5 md:mt-0">
 							<h4 className="text-sm my-1">Feature Project</h4>
 							<h1 className="text-lg my-2">Learning With AI</h1>
 							<Button
 								variant="contained"
-								color="secondary"
-								className="py-2 px-4"
+								
+								className="py-2 px-4 bg-[#430d79]"
 							>
 								View Project
 							</Button>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -10,19 +9,22 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Link from '@mui/material/Link';
 import Badge from '@mui/material/Badge';
 import Paper from '@mui/material/Paper';
+import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 const pages = ['// home', '//expertise', '// work', '// experience', '// contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scrollToExperience, scrollToContact }) {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
-	const [anchorElUser, setAnchorElUser] = React.useState(null);
+	const pathname = usePathname();
+	const router = useRouter();
 
-	const [paperColor, setPaperColor] = useState('#141f2b');
+	const bgColor = pathname == "/" ? "#141f2b" : "transparent"
+
+	const [paperColor, setPaperColor] = useState(bgColor);
 	const [textColor, setTextColor] = useState('#fff');
 	const [desktopLogo, setDesktopLogo] = useState('Ocolus1');
 
@@ -36,7 +38,7 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
                 setTextColor('#65d6e9');
 				setDesktopLogo("")
             } else {
-                setPaperColor('#141f2b');
+                setPaperColor(bgColor);
 				setTextColor('#fff');
 				setDesktopLogo("Ocolus1")
             }
@@ -54,29 +56,42 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
 	};
-	const handleOpenUserMenu = (event) => {
-		setAnchorElUser(event.currentTarget);
-	};
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
 
-	const handleCloseUserMenu = () => {
-		setAnchorElUser(null);
-	};
-
 	const handleRef = (index) => {
 		if (index == 0) {
-			scrollToHome()
+			if (pathname == "/") {
+				scrollToHome()
+			} else {
+				router.push("/?scroll-to=home");
+			}
 		} else if (index == 1) {
-			scrollToExpertise()
+			if (pathname == "/") {
+				scrollToExpertise()
+			} else {
+				router.push("/?scroll-to=expertise");
+			}
 		} else if (index == 2) {
-			scrollToWork()
+			if (pathname == "/") {
+				scrollToWork()
+			} else {
+				router.push("/?scroll-to=work");
+			}
 		}else if (index == 3) {
-			scrollToExperience()
+			if (pathname == "/") {
+				scrollToExperience()
+			} else {
+				router.push("/?scroll-to=experience");
+			}
 		}else if (index == 4) {
-			scrollToContact()
+			if (pathname == "/") {
+				scrollToContact()
+			} else {
+				router.push("/?scroll-to=contact");
+			}
 		}
 	}
 
@@ -91,15 +106,25 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 	};
 
 	return (
-		<Paper className="sticky top-0 border-0 shadow-0 z-40 " sx={{ backgroundColor: paperColor }} elevation={0}>
+		<Paper
+			className="sticky top-0 border-0 shadow-0 z-40 "
+			sx={{ backgroundColor: paperColor }}
+			elevation={0}
+		>
+			<style jsx>
+				{`
+					.MuiMenu-paper {
+						background-color: rgba(26, 24, 28, 0.5) !important;
+					}
+				`}
+			</style>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					
 					<Typography
 						variant="h6"
 						noWrap
 						component="a"
-						href="#app-bar-with-responsive-menu"
+						href="/"
 						sx={{
 							mr: 2,
 							display: { xs: 'none', md: 'flex' },
@@ -127,10 +152,9 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 							onClick={handleOpenNavMenu}
 							color="inherit"
 						>
-							<MenuIcon />
+							<MenuIcon className="text-white" />
 						</IconButton>
 						<Menu
-							id="menu-appbar"
 							anchorEl={anchorElNav}
 							anchorOrigin={{
 								vertical: 'bottom',
@@ -147,10 +171,13 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 								display: { xs: 'block', md: 'none' },
 							}}
 						>
-							{pages.map((page) => (
+							{pages.map((page, index) => (
 								<MenuItem
 									key={page}
-									onClick={handleCloseNavMenu}
+									onClick={() => {
+										handleRef(index);
+										handleCloseNavMenu();
+									}}
 								>
 									<Typography textAlign="center">
 										{page}
@@ -159,14 +186,10 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 							))}
 						</Menu>
 					</Box>
-					<AdbIcon
-						sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
-					/>
 					<Typography
 						variant="h5"
 						noWrap
 						component="a"
-						href="#app-bar-with-responsive-menu"
 						sx={{
 							mr: 2,
 							display: { xs: 'flex', md: 'none' },
@@ -177,8 +200,9 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 							color: 'inherit',
 							textDecoration: 'none',
 						}}
+						className="text-white"
 					>
-						LOGO
+						Ocolus1
 					</Typography>
 					<Box
 						sx={{
@@ -206,7 +230,10 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 								className="top-nav px-5 font-bold hover:cursor-pointer text-lg"
 								underline="none"
 							>
-								<Badge badgeContent={`0${index + 1}`} className="bg-transparent">
+								<Badge
+									badgeContent={`0${index + 1}`}
+									className="bg-transparent"
+								>
 									{page}
 								</Badge>
 							</Link>

@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Expert({ img_src, title, description}) {
   return (
-    <div className="border p-6 w-[33.33%]">
-      <div className="flex flex-row space-x-4 justify-center items-center py-4" >
+    <div className="border p-6 w-[90%] md:w-[33.33%]">
+      <div className="flex flex-row space-x-4 sm:justify-center items-center py-4" >
         {img_src}
-        <h3 className="text-3xl font-bold" >{title}</h3>
+        <h3 className=" sm:text-2xl md:text-3xl font-bold" >{title}</h3>
       </div>
       <div
         className="relative after:opacity-25 after:content-[''] after:w-0 after:h-[55%] after:absolute after:bg-white after:border after:left-[17px] after:bottom-[22%]"

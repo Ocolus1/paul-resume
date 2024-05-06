@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
 import Hero from "@/components/app/Hero"
 import Navbar from "@/components/Navbar"
 import SectionOne from "@/components/app/SectionOne"
@@ -8,8 +8,13 @@ import SectionTwo from "@/components/app/SectionTwo"
 import SectionThree from "@/components/app/SectionThree"
 import SectionFour from "@/components/app/SectionFour"
 import SectionFive from "@/components/app/SectionFive"
+import { useSearchParams } from 'next/navigation';
 
 export default function Home() {
+
+  const searchParams = useSearchParams();
+
+  const search = searchParams.get('scroll-to');
 
   const scrollToRef = (ref) => {
     if (ref && ref.current) {
@@ -20,6 +25,7 @@ export default function Home() {
     }
   };
 
+  
   const myHome = useRef(null);
   const scrollToHome = () => scrollToRef(myHome);
 
@@ -38,15 +44,32 @@ export default function Home() {
   const myContact = useRef(null);
   const scrollToContact = () => scrollToRef(myContact);
 
+  useEffect(() => {
+		// Scroll to the element with the ID passed in the query parameter
+		if (search) {
+			if (search == 'home') {
+				scrollToHome();
+			} else if (search == 'expertise') {
+				scrollToExpertise();
+			} else if (search == 'work') {
+        scrollToWork();
+      } else if (search == 'experience') {
+        scrollToExperience();
+      } else if (search == 'contact') {
+        scrollToContact();
+      }
+		}
+  }, [search, scrollToWork, scrollToExpertise, scrollToWork, scrollToExperience, scrollToContact]);
+
   return (
     <div >
-        <Navbar 
-          scrollToHome={scrollToHome} 
-          scrollToExpertise={scrollToExpertise} 
-          scrollToWork={scrollToWork} 
-          scrollToExperience={scrollToExperience} 
-          scrollToContact={scrollToContact} 
-        />
+      <Navbar
+        scrollToHome={scrollToHome}
+        scrollToExpertise={scrollToExpertise}
+        scrollToWork={scrollToWork}
+        scrollToExperience={scrollToExperience}
+        scrollToContact={scrollToContact}
+      />
       <div className="top-img">
         <Hero scrollToExpertise={scrollToExpertise} myHome={myHome} />
       </div>

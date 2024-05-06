@@ -12,7 +12,7 @@ function StringSplitter({ text }) {
   const parts = text.split('.');
 
   return (
-    <ul className="w-10/12">
+    <ul className=" w-full lg:w-10/12">
       {/* Map through the parts and render each as an li */}
       {parts.map((part, index) => (
         <li className="leading-6" key={index}>{part}</li>
@@ -26,14 +26,14 @@ export default function Experience({ position, company, duration, img, descripti
 
     return (
         <>
-            <Accordion className="rounded-lg mb-3 bg-transparent w-10/12" defaultExpanded={expanded} >
+            <Accordion className="rounded-lg mb-3 bg-transparent px-5 sm:px-0 sm:w-10/12" defaultExpanded={expanded} >
                 <AccordionSummary
                     expandIcon={<AddIcon />}
                     aria-controls="panel1-content"
                     id="panel1-header"
                     className='rounded-lg bg-[#430d79]'
                 >
-                    <div className="flex flex-row justify-between w-full text-white font-bold  mr-3">
+                    <div className="flex flex-row justify-between w-full smw:text-xs text-white font-bold  mr-3">
                         <p> {position} @ {company} </p>
                         <p>{duration}</p>
                     </div>
@@ -41,7 +41,7 @@ export default function Experience({ position, company, duration, img, descripti
                 <AccordionDetails className="bg-[#251d40] mt-3 rounded-lg text-white">
                     <div className="flex flex-row justify-between w-full text-white text-xs">
                         <StringSplitter text={description} />
-                        <div className="flex items-center w-2/12">
+                        <div className="hidden items-center w-2/12">
                             <div className="w-full text-center relative">
                                 <Image 
                                     src={img} 

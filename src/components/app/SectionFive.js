@@ -6,22 +6,22 @@ const testimonials = [
 	{
 		img_src: '/card-img.jpg',
 		description:
-			'Since 2018 Tamal has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		description:
-			'Since 2018 Tamal has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		description:
-			'Since 2018 Tamal has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		description:
-			'Since 2018 Tamal has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
 	},
 ];
 
@@ -35,26 +35,26 @@ export default function SectionFive({ myContact }) {
 	return (
 		<div className="text-white" ref={myContact}>
 			<div className="pt-16">
-				<div className="w-full flex flex-row min-h-dvh">
-					<div className="w-1/2 bg-black">
-						<div className="p-20 min-h-dvh flex flex-col justify-between">
+				<div className="w-full flex gap-6 md:gap-0 md:space-y-0 flex-col-reverse md:flex-row">
+					<div className=" w-full md:w-1/2 bg-black">
+						<div className="p-10 md:p-20 flex flex-col justify-between">
 							<div>
-								<p className="text-4xl font-bold mb-12">
+								<p className=" text-2xl md:text-3xl font-bold mb-12">
 									Available for select freelance opportunities
 								</p>
-								<div className="max-w-96 my-8">
-									<p className="leading-5 text-xl font-semibold">
+								<div className="my-8">
+									<p className="leading-5 md:text-xl font-semibold">
 										Have an exciting project you need help
 										with?
 									</p>
-									<p className="leading-5 text-xl font-semibold">
+									<p className="leading-5 md:text-xl font-semibold">
 										Send me an email or contact me via
 										instant message!
 									</p>
 								</div>
 							</div>
 							<div>
-								<p className="my-3 text-2xl font-semibold">
+								<p className="my-3 md:text-2xl font-semibold">
 									<a
 										href="https://paulawolesi.com"
 										target="_blank"
@@ -63,7 +63,7 @@ export default function SectionFive({ myContact }) {
 										paulawolesi.com
 									</a>
 								</p>
-								<p className="my-2 font-semibold">
+								<p className="my-2 text-xs md:text-base font-semibold">
 									<a
 										href="https://twitter.com/PAwolesi"
 										target="_blank"
@@ -72,7 +72,7 @@ export default function SectionFive({ myContact }) {
 										Twitter
 									</a>
 								</p>
-								<p className="my-2 font-semibold">
+								<p className="my-2 text-xs md:text-base font-semibold">
 									<a
 										href="https://www.linkedin.com/in/paul-awolesi"
 										target="_blank"
@@ -81,7 +81,7 @@ export default function SectionFive({ myContact }) {
 										LinkedIn
 									</a>
 								</p>
-								<p className="my-2 font-semibold">
+								<p className="my-2 text-xs md:text-base font-semibold">
 									<a
 										href="https://github.com/ocolus1"
 										target="_blank"
@@ -90,7 +90,7 @@ export default function SectionFive({ myContact }) {
 										Github
 									</a>
 								</p>
-								<p className="my-2 font-semibold">
+								<p className="my-2 text-xs md:text-base font-semibold">
 									<a
 										href="malto:bpawolesi@gmail.com"
 										target="_blank"
@@ -102,14 +102,14 @@ export default function SectionFive({ myContact }) {
 							</div>
 						</div>
 					</div>
-					<div className="w-1/2 pl-4 pb-4">
-						<div className="flex flex-row flex-wrap w-full min-h-dvh gap-3">
-							{testimonials.map((item) => {
+					<div className=" w-full md:w-1/2 pl-4 pr-4 lg:pr-0 pb-4">
+						<div className="flex flex-row flex-wrap w-full gap-6 md:gap-3">
+							{testimonials.map((item, index) => {
 								const bgColor = getRandomColor();
 								return (
 									<div
-										key={item}
-										className="min-w-56 max-w-56 p-4 rounded-lg"
+										key={index}
+										className="lg:min-w-56 lg:max-w-56 p-4 rounded-lg"
 										style={{ backgroundColor: bgColor }}
 									>
 										<div className="flex flex-row justify-between mb-2">
@@ -120,6 +120,7 @@ export default function SectionFive({ myContact }) {
 												<img
 													src={item.img_src}
 													className="h-10 w-10 rounded-full"
+													alt="profile"
 												/>
 											</div>
 										</div>

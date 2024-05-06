@@ -48,13 +48,13 @@ export default function SectionTwo() {
     const filteredCards = filter === 'All' ? portfolioCard : portfolioCard.filter(card => card.category.includes(filter));
 
   return (
-		<div className="flex justify-center py-16">
+		<div className="flex justify-center px-5 sm:px-0 py-16">
 			<div className="flex text-white w-full max-w-screen-lg">
 				<div className="flex flex-row items-center w-full">
-					<div className="flex flex-row flex-wrap max-w-screen-lg">
+					<div className="flex flex-row flex-wrap max-w-screen-lg sm:px-5 xl:px-0">
 						<div className="flex flex-col w-full mb-8">
 							<div className="flex justify-between items-center mb-4">
-								<div className="flex gap-3 mb-4">
+								<div className="flex gap-2 sm:gap-3 mb-4">
 									<Button
 										variant={
 											filter === 'All'
@@ -62,7 +62,7 @@ export default function SectionTwo() {
 												: 'outlined'
 										}
 										onClick={() => filterItems('All')}
-										className="bg-[#5fbdd3]"
+										className="smw:text-xs smw:px-1 smw:py-1 bg-[#5fbdd3]"
 									>
 										All ({portfolioCard.length})
 									</Button>
@@ -78,7 +78,7 @@ export default function SectionTwo() {
 												'Full-stack Web Development'
 											)
 										}
-										className="text-[#5fbdd3] border-[#5fbdd3] hover:border-[#5fbdd3]"
+										className="smw:text-xs smw:px-1 smw:py-1 text-[#5fbdd3] border-[#5fbdd3] hover:border-[#5fbdd3]"
 									>
 										Full-stack (
 										{
@@ -99,7 +99,7 @@ export default function SectionTwo() {
 										onClick={() =>
 											filterItems('Backend Development')
 										}
-										className="text-[#5fbdd3] border-[#5fbdd3] hover:border-[#5fbdd3]"
+										className="smw:text-xs smw:px-1 smw:py-1 text-[#5fbdd3] border-[#5fbdd3] hover:border-[#5fbdd3]"
 									>
 										Backend (
 										{
@@ -120,7 +120,7 @@ export default function SectionTwo() {
 										onClick={() =>
 											filterItems('No Code Development')
 										}
-										className="text-[#5fbdd3] border-[#5fbdd3] hover:border-[#5fbdd3]"
+										className="smw:text-xs smw:px-1 smw:py-1 text-[#5fbdd3] border-[#5fbdd3] hover:border-[#5fbdd3]"
 									>
 										No code (
 										{
@@ -134,7 +134,7 @@ export default function SectionTwo() {
 									</Button>
 								</div>
 							</div>
-							<div className="grid grid-cols-3 gap-5">
+							<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6 lg:gap-5">
 								{filteredCards.map((item, index) => {
 									return <Portofolio key={index} {...item} />;
 								})}

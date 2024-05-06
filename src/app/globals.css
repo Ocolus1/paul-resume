@@ -12,6 +12,10 @@ body {
   background-color: #1a181c;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
