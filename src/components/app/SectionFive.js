@@ -5,23 +5,39 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 const testimonials = [
 	{
 		img_src: '/card-img.jpg',
+		name: 'Noahwbragg',
 		description:
-			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Paul did a fantastic job! I"m impressed and would definitely collaborate with him again. Thank you for your hard work.',
 	},
 	{
 		img_src: '/card-img.jpg',
+		name: 'SalmanHaider4',
 		description:
-			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Paul"s development skills are top-notch, and his communication regarding changes is exceptional. I highly recommend collaborating with him.',
 	},
 	{
 		img_src: '/card-img.jpg',
+		name: 'BrandonF7',
 		description:
-			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Paul"s efficiency was impressive! Thanks for the great work.',
 	},
 	{
 		img_src: '/card-img.jpg',
+		name: 'Ajitador',
 		description:
-			'Since 2018 Paul has been responsible for the development of our website which has been instrumental to the growth of our company.',
+			'Working was a pleasure -- Paul went above and beyond to ensure the task was done well, and were very communicative.',
+	},
+	{
+		img_src: '/card-img.jpg',
+		name: 'Samuel Smith',
+		description:
+			'Paul absolutely killed it! One of the most highly communicative, proficient developers I"ve had.',
+	},
+	{
+		img_src: '/card-img.jpg',
+		name: 'John Happer',
+		description:
+			'Their expertise is evident in the efficient, well-structured code and polished user interface. Working with them has been a pleasure.',
 	},
 ];
 
@@ -114,17 +130,18 @@ export default function SectionFive({ myContact }) {
 									>
 										<div className="flex flex-row justify-between mb-2">
 											<div>
-												<FormatQuoteIcon className="h-10 w-10" />
+												<FormatQuoteIcon className=" h-6 w-6 md:h-10 md:w-10" />
 											</div>
 											<div>
-												<img
+												{/* <img
 													src={item.img_src}
 													className="h-10 w-10 rounded-full"
 													alt="profile"
-												/>
+												/> */}
 											</div>
 										</div>
 										<div>{item.description}</div>
+										<div className="mt-2"> - {item.name}</div>
 									</div>
 								);
 							})}
