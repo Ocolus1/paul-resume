@@ -9,7 +9,8 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import Footer from "@/components/Footer.js"
+import Footer from "@/components/Footer"
+import NextCard from "@/components/NextCard"
 
 
 export default function HotTubbPrescription() {
@@ -64,41 +65,53 @@ export default function HotTubbPrescription() {
 				scrollToExperience={scrollToExperience}
 				scrollToContact={scrollToContact}
 			/>
-			<main className="flex flex-col items-center py-16">
-            	<Back />
-				<div className="max-w-screen-xl w-10/12 text-white py-8">
-					<div className="w-1/2">
-						<p className="text-[#c2c0c3] text-xs font-semibold after:text-[#66d9ed] after:content-['.'] after:inline-block after:align-top after:mt-[-3px] ">Web Development</p>
-						<p className="text-[64px] font-bold">Hot Tub Prescription</p>
+			<main className="flex flex-col items-center mdw:py-8 lg:py-16">
+				<Back />
+				<div className="max-w-screen-xl px-5 sm:px-1 sm:w-10/12 text-white py-8">
+					<div className="md:w-2/3 lg:w-1/2">
+						<p className="text-[#c2c0c3] text-xs font-semibold after:text-[#66d9ed] after:content-['.'] after:inline-block after:align-top after:mt-[-3px] ">
+							Web Development
+						</p>
+						<p className="text-lg sm:text-[38px] md:text-[50px] lg:text-[64px] lgw:py-5 xl:py-0 leading-snug font-bold">
+							Hot Tub Prescription
+						</p>
 						<div>
 							<Breadcrumbs
-								separator={<NavigateNextIcon fontSize="small" />}
+								separator={
+									<NavigateNextIcon fontSize="small" />
+								}
 								aria-label="breadcrumb"
-								className="text-white"
+								className="text-white mdw:text-sm"
 							>
 								{breadcrumbs}
 							</Breadcrumbs>
 						</div>
-						<div className="py-8" >
-							Introducing HotTubPrescription.com, a pioneering 
-                            platform revolutionizing the acquisition of medical 
-                            device prescriptions, with a specialized focus on hot 
-                            tubs for therapeutic use. Our website simplifies the 
-                            often complex and time-consuming process of obtaining a 
-                            doctor&apos;s prescription, empowering individuals seeking 
-                            relief through hydrotherapy. By seamlessly connecting patients 
-                            with healthcare professionals, HotTubPrescription.com ensures 
-                            swift access to prescriptions tailored to therapeutic needs. 
-                            Through our innovative approach, we aim to enhance accessibility 
-                            to holistic wellness solutions, promoting the benefits of hot 
-                            tub therapy for physical and mental well-being. Join us on the 
-                            forefront of medical innovation as we prioritize comfort, health, 
-                            and convenience for all.
+						<div className="py-8 mdw:text-sm">
+							Introducing HotTubPrescription.com, a pioneering
+							platform revolutionizing the acquisition of medical
+							device prescriptions, with a specialized focus on
+							hot tubs for therapeutic use. Our website simplifies
+							the often complex and time-consuming process of
+							obtaining a doctor&apos;s prescription, empowering
+							individuals seeking relief through hydrotherapy. By
+							seamlessly connecting patients with healthcare
+							professionals, HotTubPrescription.com ensures swift
+							access to prescriptions tailored to therapeutic
+							needs. Through our innovative approach, we aim to
+							enhance accessibility to holistic wellness
+							solutions, promoting the benefits of hot tub therapy
+							for physical and mental well-being. Join us on the
+							forefront of medical innovation as we prioritize
+							comfort, health, and convenience for all.
 						</div>
 					</div>
 					<div>
-						<img src="/Hottubprescription-full-page.png" className="w-full mb-4" />
+						<img
+							src="/Hottubprescription-full-page.png"
+							className="w-full mb-4"
+						/>
 					</div>
+					<NextCard />
 					<Footer />
 				</div>
 			</main>

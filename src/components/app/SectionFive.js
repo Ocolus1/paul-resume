@@ -39,10 +39,10 @@ export default function SectionFive({ myContact }) {
 					<div className=" w-full md:w-1/2 bg-black">
 						<div className="p-10 md:p-20 flex flex-col justify-between">
 							<div>
-								<p className=" text-2xl md:text-3xl font-bold mb-12">
+								<p className=" text-2xl md:text-3xl font-bold mb-10">
 									Available for select freelance opportunities
 								</p>
-								<div className="my-8">
+								<div className="my-6">
 									<p className="leading-5 md:text-xl font-semibold">
 										Have an exciting project you need help
 										with?

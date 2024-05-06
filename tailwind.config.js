@@ -28,6 +28,7 @@ module.exports = {
 
 			'2xl': '1536px',
 			// => @media (min-width: 1536px) { ... }
+			lgw: { max: '1024px' },
 			mdw: { max: '768px' },
 			smw: { max: '640px' },
 			xsw: { max: '280' },

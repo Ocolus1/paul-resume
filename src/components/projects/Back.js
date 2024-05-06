@@ -10,18 +10,18 @@ export default function Back() {
 
 	return (
 		<div
-			className="w-32 text-[#b2b0b2] fixed left-[20px] top-[100px] hover:cursor-pointer"
+			className="w-32 text-[#b2b0b2] fixed left-[20px] mdw:top-[60px] lg:top-[100px] hover:cursor-pointer"
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
 		>
 			<KeyboardBackspaceIcon 
-				className="p-4 h-14 w-14 bg-[#201e22] rounded-full"  
+				className="lg:p-4 lgw:p-2 lgw:h-12 lgw:w-12 lg:h-14 lg:w-14 bg-[#201e22] rounded-full"  
 				onClick={() => router.push("/")}
 			/>
 			<span
 				className={`absolute right-0 top-0 transform ${
 					hovered ? 'translate-x-0' : 'translate-x-full opacity-0'
-				} transition-transform duration-300 px-4 py-4`}
+				} transition-transform duration-300 lgw:px-2 lgw:py-2 lg:px-4 lg:py-4`}
 			>
 				Back
 			</span>

@@ -29,7 +29,7 @@ export default function SectionFour({ myExperience }) {
 	return (
 		<div className="flex justify-center text-white" ref={myExperience} >
             <div className=" py-12 sm:py-16">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-8 md:mb-4 block" >Professional Experience</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-8 md:mb-4 block md:hidden " >Professional Experience</h1>
                 <h1 className="hidden md:block text-2xl md:text-4xl lg:text-7xl font-bold text-center mb-4" >Professional</h1>
                 <h1 className="hidden md:block text-2xl md:text-4xl lg:text-7xl font-bold text-center mb-10" >Experience</h1>
                 <div className="flex text-white w-full max-w-screen-lg">

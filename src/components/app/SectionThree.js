@@ -24,16 +24,16 @@ const portfolioCard = [
 		link: '/projects/mom-and-dad-tales',
 	},
 	{
-		img_src: '/convertdfile.png',
-		title: 'Image Conversion Tool',
-		category: 'Backend Development',
-		link: '/projects/image-conversion-tool',
+		img_src: '/otterly.png',
+		title: 'AI Ranking & Monitoring',
+		category: 'No Code Development',
+		link: '/projects/otterly',
 	},
 	{
 		img_src: '/thenetworkstate.png',
 		title: 'Book Reader & Podcast',
 		category: 'Backend Development',
-		link: '/book-reader',
+		link: '/projects/book-reader',
 	},
 ];
 

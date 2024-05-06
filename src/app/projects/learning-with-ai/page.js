@@ -9,7 +9,8 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import Footer from "@/components/Footer.js"
+import Footer from "@/components/Footer"
+import NextCard from "@/components/NextCard"
 
 
 export default function LearningWithAI() {
@@ -63,22 +64,23 @@ export default function LearningWithAI() {
 				scrollToExperience={scrollToExperience}
 				scrollToContact={scrollToContact}
 			/>
-			<main className="flex flex-col items-center py-16">
+			<main className="flex flex-col items-center mdw:py-8 lg:py-16">
             	<Back />
-				<div className="max-w-screen-xl w-10/12 text-white py-8">
-					<div className="w-1/2">
+				
+				<div className="max-w-screen-xl px-5 sm:px-1 sm:w-10/12 text-white py-8">
+					<div className="md:w-2/3 lg:w-1/2">
 						<p className="text-[#c2c0c3] text-xs font-semibold after:text-[#66d9ed] after:content-['.'] after:inline-block after:align-top after:mt-[-3px] ">Web Development</p>
-						<p className="text-[64px] font-bold">Learning With AI</p>
+						<p className="text-lg sm:text-[38px] md:text-[50px] lg:text-[64px] lgw:py-5 xl:py-0 leading-snug font-bold">Learning With AI</p>
 						<div>
 							<Breadcrumbs
 								separator={<NavigateNextIcon fontSize="small" />}
 								aria-label="breadcrumb"
-								className="text-white"
+								className="text-white mdw:text-sm"
 							>
 								{breadcrumbs}
 							</Breadcrumbs>
 						</div>
-						<div className="py-8" >
+						<div className="py-8 mdw:text-sm" >
 							Introducing Sensei, an innovative AI tailored to 
 							your learning journey. Combining the finest AI 
 							technologies globally, Sensei is designed to adapt 
@@ -96,6 +98,7 @@ export default function LearningWithAI() {
 					<div>
 						<img src="/learning-with-full-page.png" className="w-full mb-4" />
 					</div>
+					<NextCard />
 					<Footer />
 				</div>
 			</main>
