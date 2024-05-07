@@ -150,7 +150,6 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 							aria-controls="menu-appbar"
 							aria-haspopup="true"
 							onClick={handleOpenNavMenu}
-							color="inherit"
 						>
 							<MenuIcon className="text-white" />
 						</IconButton>
@@ -197,10 +196,9 @@ function ResponsiveAppBar( { scrollToHome, scrollToExpertise, scrollToWork, scro
 							fontFamily: 'monospace',
 							fontWeight: 700,
 							letterSpacing: '.3rem',
-							color: 'inherit',
+							color: '#fff',
 							textDecoration: 'none',
 						}}
-						className="text-white"
 					>
 						Ocolus1
 					</Typography>

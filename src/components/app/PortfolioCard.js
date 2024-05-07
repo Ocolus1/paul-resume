@@ -31,7 +31,7 @@ export default function Portofolio({img_src, title, category, link}) {
                             <img
                                 src={img_src}
                                 alt="unsplash"
-                                className={`w-full min-h-48 bg-cover bg-center rounded-t-lg ${imgClass} transition-transform duration-500 ease-in-out`}
+                                className={`w-full sm:min-h-48 bg-cover bg-center rounded-t-lg ${imgClass} transition-transform duration-500 ease-in-out`}
                             />
                         </a>
                     </div>

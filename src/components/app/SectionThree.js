@@ -54,7 +54,7 @@ export default function SectionTwo() {
 					<div className="flex flex-row flex-wrap max-w-screen-lg sm:px-5 xl:px-0">
 						<div className="flex flex-col w-full mb-8">
 							<div className="flex justify-between items-center mb-4">
-								<div className="flex gap-2 sm:gap-3 mb-4">
+								<div className="flex flex-wrap gap-2 sm:gap-3 mb-4">
 									<Button
 										variant={
 											filter === 'All'

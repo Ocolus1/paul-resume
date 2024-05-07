@@ -31,7 +31,7 @@ export default function SectionTwo({ myWork }) {
 					<div className="w-full md:w-1/2 flex flex-col justify-between h-full py-8 md:py-4 px-2">
 						<img
 							src="/learning-with.png"
-							className="h-72 rounded-lg"
+							className="md:h-72 rounded-lg"
 							alt="learning"
 						/>
 						<div className="mt-5 md:mt-0">

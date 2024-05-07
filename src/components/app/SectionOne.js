@@ -35,8 +35,8 @@ export default function SectionOne({ myExpertise }) {
 				</h1>
 				{/* flex flex-row flex-wrap max-w-screen-lg */}
 				<div className="flex flex-col xsw:items-center smw:items-center mdw:items-center space-y-6 md:space-y-0 md:flex-row md:flex-wrap max-w-screen-lg sm:px-5 xl:px-0">
-					{expertise.map((item) => {
-						return <Expert key={item} {...item} />;
+					{expertise.map((item, index) => {
+						return <Expert key={index} {...item} />;
 					})}
 				</div>
 				<div className="flex flex-row justify-center">

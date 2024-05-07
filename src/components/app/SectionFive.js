@@ -6,46 +6,47 @@ const testimonials = [
 	{
 		img_src: '/card-img.jpg',
 		name: 'Noahwbragg',
+		color: "#bd61fb",
 		description:
 			'Paul did a fantastic job! I"m impressed and would definitely collaborate with him again. Thank you for your hard work.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		name: 'SalmanHaider4',
+		color: "#0067dc",
 		description:
 			'Paul"s development skills are top-notch, and his communication regarding changes is exceptional. I highly recommend collaborating with him.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		name: 'BrandonF7',
+		color: "#933ee6",
 		description:
 			'Paul"s efficiency was impressive! Thanks for the great work.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		name: 'Ajitador',
+		color: "#0067dc",
 		description:
 			'Working was a pleasure -- Paul went above and beyond to ensure the task was done well, and were very communicative.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		name: 'Samuel Smith',
+		color: "#bd61fb",
 		description:
 			'Paul absolutely killed it! One of the most highly communicative, proficient developers I"ve had.',
 	},
 	{
 		img_src: '/card-img.jpg',
 		name: 'John Happer',
+		color: "#0067dc",
 		description:
 			'Their expertise is evident in the efficient, well-structured code and polished user interface. Working with them has been a pleasure.',
 	},
 ];
 
-const getRandomColor = () => {
-	const colors = ['#bd61fb', '#0067dc', '#933ee6'];
-	const randomIndex = Math.floor(Math.random() * colors.length);
-	return colors[randomIndex];
-};
 
 export default function SectionFive({ myContact }) {
 	return (
@@ -121,12 +122,11 @@ export default function SectionFive({ myContact }) {
 					<div className=" w-full md:w-1/2 pl-4 pr-4 lg:pr-0 pb-4">
 						<div className="flex flex-row flex-wrap w-full gap-6 md:gap-3">
 							{testimonials.map((item, index) => {
-								const bgColor = getRandomColor();
 								return (
 									<div
 										key={index}
 										className="lg:min-w-56 lg:max-w-56 p-4 rounded-lg"
-										style={{ backgroundColor: bgColor }}
+										style={{ backgroundColor: item.color }}
 									>
 										<div className="flex flex-row justify-between mb-2">
 											<div>
